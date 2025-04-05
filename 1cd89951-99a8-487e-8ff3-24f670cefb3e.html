@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório de Segurança Provincial - Projeto CHEGAR</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .provincia-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out;
+        }
+        .provincia-content.active {
+            max-height: 1000px;
+        }
+        .grafico-placeholder {
+            height: 200px;
+            background-color: #e5e7eb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <header class="bg-gray-800 text-white p-6 text-center shadow-lg">
+        <h1 class="text-3xl font-bold">Relatório de Segurança Provincial - Projeto CHEGAR</h1>
+        <p class="mt-2">Data: 4 de Abril de 2025</p>
+    </header>
+    <div class="container mx-auto mt-6 p-6 bg-white rounded-lg shadow-lg">
+        <section id="resumo" class="mb-8">
+            <h2 class="text-2xl font-semibold text-gray-800 border-b-2 border-gray-300 pb-2">Resumo</h2>
+            <p class="mt-4 text-gray-700">Este relatório tem como objetivo monitorizar a segurança nas províncias de Moçambique, com um enfoque especial no acompanhamento das atividades do Projeto CHEGAR (Commodities for Health: Ensuring Guaranteed Access and Reliability). Através da identificação de áreas classificadas como de alto risco, risco moderado e segurança estável, o relatório visa fornecer informações essenciais para apoiar a tomada de decisões operacionais. Para garantir uma avaliação contínua e precisa do ambiente de segurança, são apresentados dados atualizados sobre o status de segurança, incidentes, condição das rotas e planos de mitigação por província.</p>
+            <p class="mt-2 font-semibold text-gray-800">Síntese Provincial:</p>
+            <ul class="list-disc list-inside mt-2 text-gray-700">
+                <li><span class="text-red-600">Pontos de Risco:</span> Cabo Delgado, Nampula, IW-Mopeia</li>
+                <li><span class="text-yellow-600">Risco Moderado:</span> Gaza</li>
+                <li><span class="text-green-600">Segurança Estável:</span> Niassa, IW-Ile, IW-Quelimane, IW-Mocuba, Tete, Sofala, Manica, Inhambane, IW-Vilankulos, Maputo, Maputo Cidade</li>
+            </ul>
+        </section>
+        <section id="provincias">
+            <h2 class="text-2xl font-semibold text-gray-800 border-b-2 border-gray-300 pb-2">Análise por Província</h2>
+            <div class="provincia mt-6">
+                <h3 class="text-xl font-medium bg-gray-200 p-4 rounded-t-lg cursor-pointer hover:bg-gray-300 transition" onclick="toggleContent('cabo-delgado')">Cabo Delgado</h3>
+                <div id="cabo-delgado" class="provincia-content">
+                    <table class="w-full mt-4 border-collapse">
+                        <tr class="border-b">
+                            <th class="p-3 text-left text-gray-600">Classificação</th>
+                            <td class="p-3 text-red-600 font-bold">Ponto de Risco</td>
+                        </tr>
+                        <tr class="border-b">
+                            <th class="p-3 text-left text-gray-600">Local</th>
+                            <td class="p-3">Ancuabe</td>
+                        </tr>
+                        <tr class="border-b">
+                            <th class="p-3 text-left text-gray-600">Incidentes</th>
+                            <td class="p-3">Presença de insurgentes confirmada</td>
+                        </tr>
+                        <tr class="border-b">
+                            <th class="p-3 text-left text-gray-600">Condição da Rota</th>
+                            <td class="p-3">Insegurança reportada</td>
+                        </tr>
+                        <tr class="border-b">
+                            <th class="p-3 text-left text-gray-600">Status Distribuição</th>
+                            <td class="p-3">Em processo (Ciclo de Março: 18 Mar - 31 Mar)</td>
+                        </tr>
+                        <tr>
+                            <th class="p-3 text-left text-gray-600">Plano de Mitigação</th>
+                            <td class="p-3">Monitorar atividade insurgente; planejar entregas para a próxima semana</td>
+                        </tr>
+                    </table>
+                    <div class="grafico-placeholder mt-4">Mapa de Incidentes em Cabo Delgado</div>
+                </div>
+            </div>
+            <div class="provincia mt-6">
+                <h3 class="text-xl font-medium bg-gray-200 p-4 rounded-t-lg cursor-pointer hover:bg-gray-300 transition" onclick="toggleContent('nampula')">Nampula</h3>
+                <div id="nampula" class="provincia-content">
+                    <table class="w-full mt-4 border-collapse">
+                        <tr class="border-b">
+                            <th class="p-3 text-left text-gray-600">Classificação</th>
+                            <td class="p-3 text-red-600 font-bold">Ponto de Risco</td>
+                        </tr>
+                        <tr class="border-b">
+                            <th class="p-3 text-left text-gray-600">Local</th>
+                            <td class="p-3">Mogovolas - CS Muatua e CS Nanhupo Rio</td>
+                        </tr>
+                        <tr class="border-b">
+                            <th class="p-3 text-left text-gray-600">Incidentes</th>
+                            <td class="p-3">Operações canceladas devido a vandalização de instalações de saúde (surto de cólera)</td>
+                        </tr>
+                        <tr class="border-b">
+                            <th class="p-3 text-left text-gray-600">Condição da Rota</th>
+                            <td class="p-3">Insegurança reportada</td>
+                        </tr>
+                        <tr class="border-b">
+                            <th class="p-3 text-left text-gray-600">Status Distribuição</th>
+                            <td class="p-3">Em processo (Ciclo de Março: 24 Mar - 10 Abr)</td>
+                        </tr>
+                        <tr>
+                            <th class="p-3 text-left text-gray-600">Plano de Mitigação</th>
+                            <td class="p-3">Realizar distribuições no ciclo de Abril</td>
+                        </tr>
+                    </table>
+                    <div class="grafico-placeholder mt-4">Mapa de Incidentes em Nampula</div>
+                </div>
+            </div>
+            <div class="provincia mt-6">
+                <h3 class="text-xl font-medium bg-gray-200 p-4 rounded-t-lg cursor-pointer hover:bg-gray-300 transition" onclick="toggleContent('iw-mopeia')">IW-Mopeia</h3>
+                <div id="iw-mopeia" class="provincia-content">
+                    <table class="w-full mt-4 border-collapse">
+                        <tr class="border-b">
+                            <th class="p-3 text-left text-gray-600">Classificação</th>
+                            <td class="p-3 text-red-600 font-bold">Ponto de Risco</td>
+                        </tr>
+                        <tr class="border-b">
+                            <th class="p-3 text-left text-gray-600">Local</th>
+                            <td class="p-3">Mopeia - CS Noer e Vinte</td>
+                        </tr>
+                        <tr class="border-b">
+                            <th class="p-3 text-left text-gray-600">Incidentes</th>
+                            <td class="p-3">Presença de Namparamas confirmada</td>
+                        </tr>
+                        <tr class="border-b">
+                            <th class="p-3 text-left text-gray-600">Condição da Rota</th>
+                            <td class="p-3">Insegurança reportada</td>
+                        </tr>
+                        <tr class="border-b">
+                            <th class="p-3 text-left text-gray-600">Status Distribuição</th>
+                            <td class="p-3">Não realizada (Ciclo de Março: 19 Mar - 24 Mar)</td>
+                        </tr>
+                        <tr>
+                            <th class="p-3 text-left text-gray-600">Plano de Mitigação</th>
+                            <td class="p-3">Realizar distribuições no ciclo de Abril</td>
+                        </tr>
+                    </table>
+                    <div class="grafico-placeholder mt-4">Mapa de Incidentes em IW-Mopeia</div>
+                </div>
+            </div>
+            <div class="provincia mt-6">
+                <h3 class="text-xl font-medium bg-gray-200 p-4 rounded-t-lg cursor-pointer hover:bg-gray-300 transition" onclick="toggleContent('gaza')">Gaza</h3>
+                <div id="gaza" class="provincia-content">
+                    <table class="w-full mt-4 border-collapse">
+                        <tr class="border-b">
+                            <th class="p-3 text-left text-gray-600">Classificação</th>
+                            <td class="p-3 text-yellow-600 font-bold">Risco Moderado</td>
+                        </tr>
+                        <tr class="border-b">
+                            <th class="p-3 text-left text-gray-600">Local</th>
+                            <td class="p-3">Xai-Xai</td>
+                        </tr>
+                        <tr class="border-b">
+                            <th class="p-3 text-left text-gray-600">Incidentes</th>
+                            <td class="p-3">Greve na cidade de Xai-Xai</td>
+                        </tr>
+                        <tr class="border-b">
+                            <th class="p-3 text-left text-gray-600">Condição da Rota</th>
+                            <td class="p-3">Rotas estáveis</td>
+                        </tr>
+                        <tr class="border-b">
+                            <th class="p-3 text-left text-gray-600">Status Distribuição</th>
+                            <td class="p-3">Não realizada (Ciclo de Março: 14 Mar - 29 Mar)</td>
+                        </tr>
+                    </table>
+                    <div class="grafico-placeholder mt-4">Mapa de Incidentes em Gaza</div>
+                </div>
+            </div>
+            <div class="provincia mt-6">
+                <h3 class="text-xl font-medium bg-gray-200 p-4 rounded-t-lg cursor-pointer hover:bg-gray-300 transition" onclick="toggleContent('niassa')">Niassa</h3>
+                <div id="niassa" class="provincia-content">
+                    <table class="w-full mt-4 border-collapse">
+                        <tr class="border-b">
+                            <th class="p-3 text-left text-gray-600">Classificação</th>
+                            <td class="p-3 text-green-600 font-bold">Segurança Estável</td>
+                        </tr>
+                        <tr class="border-b">
+                            <th class="p-3 text-left text-gray-600">Incidentes</th>
+                            <td class="p-3">Nenhum incidente reportado</td>
+                        </tr>
+                        <tr class="border-b">
+                            <th class="p-3 text-left text-gray-600">Condição da Rota</th>
+                            <td class="p-3">Rotas acessíveis</td>
+                        </tr>
+                        <tr class="border-b">
+                            <th class="p-3 text-left text-gray-600">Status Distribuição</th>
+                            <td class="p-3">Em processo (Ciclo de Março: 18 Mar - TBA)</td>
+                        </tr>
+                    </table>
+                    <div class="grafico-placeholder mt-4">Mapa de Incidentes em Niassa</div>
+                </div>
+            </div>
+            <div class="provincia mt-6">
+                <h3 class="text-xl font-medium bg-gray-200 p-4 rounded-t-lg cursor-pointer hover:bg-gray-300 transition" onclick="toggleContent('iw-ile')">IW-Ile</h3>
+                <div id="iw-ile" class="provincia-content">
+                    <table class="w-full mt-4 border-collapse">
+                        <tr class="border-b">
+                            <th class="p-3 text-left text-gray-600">Classificação</th>
+                            <td class="p-3 text-green-600 font-bold">Segurança Estável</td>
+                        </tr>
+                        <tr class="border-b">
+                            <th class="p-3 text-left text-gray-600">Incidentes</th>
+                            <td class="p-3">Nenhum incidente reportado</td>
+                        </tr>
+                        <tr class="border-b">
+                            <th class="p-3 text-left text-gray-600">Condição da Rota</th>
+                            <td class="p-3">Rotas acessíveis</td>
+                        </tr>
+                        <tr class="border-b">
+                            <th class="p-3 text-left text-gray-600">Status Distribuição</th>
+                            <td class="p-3">Não realizada (Ciclo de Março: 13 Mar - 25 Mar)</td>
+                        </tr>
+                    </table>
+                    <div class="grafico-placeholder mt-4">Mapa de Incidentes em IW-Ile</div>
+                </div>
+            </div>
+            <div class="provincia mt-6">
+                <h3 class="text-xl font-medium bg-gray-200 p-4 rounded-t-lg cursor-pointer hover:bg-gray-300 transition" onclick="toggleContent('iw-quelimane')">IW-Quelimane</h3>
+                <div id="iw-quelimane" class="provincia-content">
+                    <table class="w-full mt-4 border-collapse">
+                        <tr class="border-b">
+                            <th class="p-3 text-left text-gray-600">Classificação</th>
+                            <td class="p-3 text-green-600 font-bold">Segurança Estável</td>
+                        </tr>
+                        <tr class="border-b">
+                            <th class="p-3 text-left text-gray-600">Incidentes</th>
+                            <td class="p-3">Nenhum incidente reportado</td>
+                        </tr>
+                        <tr class="border-b">
+                            <th class="p-3 text-left text-gray-600">Condição da Rota</th>
+                            <td class="p-3">Rotas acessíveis</td>
+                        </tr>
+                        <tr class="border-b">
+                            <th class="p-3 text-left text-gray-600">Status Distribuição</th>
+                            <td class="p-3">Não realizada (Ciclo de Março: 18 Mar - 31 Mar)</td>
+                        </tr>
+                    </table>
+                    <div class="grafico-placeholder mt-4">Mapa de Incidentes em IW-Quelimane</div>
+                </div>
+            </div>
+            <div class="provincia mt-6">
+                <h3 class="text-xl font-medium bg-gray-200 p-4 rounded-t-lg cursor-pointer hover:bg-gray-300 transition" onclick="toggleContent('iw-mocuba')">IW-Mocuba</h3>
+                <div id="iw-mocuba" class="provincia-content">
+                    <table class="w-full mt-4 border-collapse">
+                        <tr class="border-b">
+                            <th class="p-3 text-left text-gray-600">Classificação</th>
+                            <td class="p-3 text-green-600 font-bold">Segurança Estável</td>
+                        </tr>
+                        <tr class="border-b">
+                            <th class="p-3 text-left text-gray-600">Incidentes</th>
+                            <td class="p-3">Nenhum incidente reportado</td>
+                        </tr>
+                        <tr class="border-b">
+                            <th class="p-3 text-left text-gray-600">Condição da Rota</th>
+                            <td class="p-3">Rotas acessíveis</td>
+                        </tr>
+                        <tr class="border-b">
+                            <th class="p-3 text-left text-gray-600">Status Distribuição</th>
+                            <td class="p-3">Não realizada (Ciclo de Março: 14 Mar - 25 Mar)</td>
+                        </tr>
+                    </table>
+                    <div class="grafico-placeholder mt-4">Mapa de Incidentes em IW-Mocuba</div>
+                </div>
+            </div>
+            <div class="provincia mt-6">
+                <h3 class="text-xl font-medium bg-gray-200 p-4 rounded-t-lg cursor-pointer hover:bg-gray-300 transition" onclick="toggleContent('tete')">Tete</h3>
+                <div id="tete" class="provincia-content">
+                    <table class="w-full mt-4 border-collapse">
+                        <tr class="border-b">
+                            <th class="p-3 text-left text-gray-600">Classificação</th>
+                            <td class="p-3 text-green-600 font-bold">Segurança Estável</td>
+                        </tr>
+                        <tr class="border-b">
+                            <th class="p-3 text-left text-gray-600">Incidentes</th>
+                            <td class="p-3">Nenhum incidente reportado</td>
+                        </tr>
+                        <tr class="border-b">
+                            <th class="p-3 text-left text-gray-600">Condição da Rota</th>
+                            <td class="p-3">Rotas estáveis, mas com alguns atrasos em áreas rurais devido à estação chuvosa</td>
+                        </tr>
+                        <tr class="border-b">
+                            <th class="p-3 text-left text-gray-600">Status Distribuição</th>
+                            <td class="p-3">Em processo (Ciclo de Março: 18 Mar - TBA)</td>
+                        </tr>
+                    </table>
+                    <div class="grafico-placeholder mt-4">Mapa de Incidentes em Tete</div>
+                </div>
+            </div>
+            <div class="provincia mt-6">
+                <h3 class="text-xl font-medium bg-gray-200 p-4 rounded-t-lg cursor-pointer hover:bg-gray-300 transition" onclick="toggleContent('sofala')">Sofala</h3>
+                <div id="sofala" class="provincia-content">
+                    <table class="w-full mt-4 border-collapse">
+                        <tr class="border-b">
+                            <th class="p-3 text-left text-gray-600">Classificação</th>
+                            <td class="p-3 text-green-600 font-bold">Segurança Estável</td>
+                        </tr>
+                        <tr class="border-b">
+                            <th class="p-3 text-left text-gray-600">Incidentes</th>
+                            <td class="p-3">Nenhum incidente reportado</td>
+                        </tr>
+                        <tr class="border-b">
+                            <th class="p-3 text-left text-gray-600">Condição da Rota</th>
+                            <td class="p-3">Rotas acessíveis</td>
+                        </tr>
+                        <tr class="border-b">
+                            <th class="p-3 text-left text-gray-600">Status Distribuição</th>
+                            <td class="p-3">Em processo (Ciclo de Março: 13 Mar - TBA)</td>
+                        </tr>
+                    </table>
+                    <div class="grafico-placeholder mt-4">Mapa de Incidentes em Sofala</div>
+                </div>
+            </div>
+            <div class="provincia mt-6">
+                <h3 class="text-xl font-medium bg-gray-200 p-4 rounded-t-lg cursor-pointer hover:bg-gray-300 transition" onclick="toggleContent('manica')">Manica</h3>
+                <div id="manica" class="provincia-content">
+                    <table class="w-full mt-4 border-collapse">
+                        <tr class="border-b">
+                            <th class="p-3 text-left text-gray-600">Classificação</th>
+                            <td class="p-3 text-green-600 font-bold">Segurança Estável</td>
+                        </tr>
+                        <tr class="border-b">
+                            <th class="p-3 text-left text-gray-600">Incidentes</th>
+                            <td class="p-3">Nenhum incidente reportado</td>
+                        </tr>
+                        <tr class="border-b">
+                            <th class="p-3 text-left text-gray-600">Condição da Rota</th>
+                            <td class="p-3">Rotas acessíveis</td>
+                        </tr>
+                        <tr class="border-b">
+                            <th class="p-3 text-left text-gray-600">Status Distribuição</th>
+                            <td class="p-3">Em processo (Ciclo de Março: 18 Mar - TBA)</td>
+                        </tr>
+                    </table>
+                    <div class="grafico-placeholder mt-4">Mapa de Incidentes em Manica</div>
+                </div>
+            </div>
+            <div class="provincia mt-6">
+                <h3 class="text-xl font-medium bg-gray-200 p-4 rounded-t-lg cursor-pointer hover:bg-gray-300 transition" onclick="toggleContent('inhambane')">Inhambane</h3>
+                <div id="inhambane" class="provincia-content">
+                    <table class="w-full mt-4 border-collapse">
+                        <tr class="border-b">
+                            <th class="p-3 text-left text-gray-600">Classificação</th>
+                            <td class="p-3 text-green-600 font-bold">Segurança Estável</td>
+                        </tr>
+                        <tr class="border-b">
+                            <th class="p-3 text-left text-gray-600">Incidentes</th>
+                            <td class="p-3">Nenhum incidente reportado</td>
+                        </tr>
+                        <tr class="border-b">
+                            <th class="p-3 text-left text-gray-600">Condição da Rota</th>
+                            <td class="p-3">Rotas acessíveis</td>
+                        </tr>
+                        <tr class="border-b">
+                            <th class="p-3 text-left text-gray-600">Status Distribuição</th>
+                            <td class="p-3">Em processo (Ciclo de Março: 18 Mar - TBA)</td>
+                        </tr>
+                    </table>
+                    <div class="grafico-placeholder mt-4">Mapa de Incidentes em Inhambane</div>
+                </div>
+            </div>
+            <div class="provincia mt-6">
+                <h3 class="text-xl font-medium bg-gray-200 p-4 rounded-t-lg cursor-pointer hover:bg-gray-300 transition" onclick="toggleContent('iw-vilankulos')">IW-Vilankulos</h3>
+                <div id="iw-vilankulos" class="provincia-content">
+                    <table class="w-full mt-4 border-collapse">
+                        <tr class="border-b">
+                            <th class="p-3 text-left text-gray-600">Classificação</th>
+                            <td class="p-3 text-green-600 font-bold">Segurança Estável</td>
+                        </tr>
+                        <tr class="border-b">
+                            <th class="p-3 text-left text-gray-600">Incidentes</th>
+                            <td class="p-3">Nenhum incidente reportado</td>
+                        </tr>
+                        <tr class="border-b">
+                            <th class="p-3 text-left text-gray-600">Condição da Rota</th>
+                            <td class="p-3">Rotas acessíveis</td>
+                        </tr>
+                        <tr class="border-b">
+                            <th class="p-3 text-left text-gray-600">Status Distribuição</th>
+                            <td class="p-3">Em processo (Ciclo de Março: 13 Mar - 25 Mar)</td>
+                        </tr>
+                    </table>
+                    <div class="grafico-placeholder mt-4">Mapa de Incidentes em IW-Vilankulos</div>
+                </div>
+            </div>
+            <div class="provincia mt-6">
+                <h3 class="text-xl font-medium bg-gray-200 p-4 rounded-t-lg cursor-pointer hover:bg-gray-300 transition" onclick="toggleContent('maputo')">Maputo</h3>
+                <div id="maputo" class="provincia-content">
+                    <table class="w-full mt-4 border-collapse">
+                        <tr class="border-b">
+                            <th class="p-3 text-left text-gray-600">Classificação</th>
+                            <td class="p-3 text-green-600 font-bold">Segurança Estável</td>
+                        </tr>
+                        <tr class="border-b">
+                            <th class="p-3 text-left text-gray-600">Incidentes</th>
+                            <td class="p-3">Nenhum incidente reportado</td>
+                        </tr>
+                        <tr class="border-b">
+                            <th class="p-3 text-left text-gray-600">Condição da Rota</th>
+                            <td class="p-3">Rotas acessíveis</td>
+                        </tr>
+                        <tr class="border-b">
+                            <th class="p-3 text-left text-gray-600">Status Distribuição</th>
+                            <td class="p-3">Em processo (Ciclo de Março: 20 Mar - TBA)</td>
+                        </tr>
+                    </table>
+                    <div class="grafico-placeholder mt-4">Mapa de Incidentes em Maputo</div>
+                </div>
+            </div>
+            <div class="provincia mt-6">
+                <h3 class="text-xl font-medium bg-gray-200 p-4 rounded-t-lg cursor-pointer hover:bg-gray-300 transition" onclick="toggleContent('maputo-cidade')">Maputo Cidade</h3>
+                <div id="maputo-cidade" class="provincia-content">
+                    <table class="w-full mt-4 border-collapse">
+                        <tr class="border-b">
+                            <th class="p-3 text-left text-gray-600">Classificação</th>
+                            <td class="p-3 text-green-600 font-bold">Segurança Estável</td>
+                        </tr>
+                        <tr class="border-b">
+                            <th class="p-3 text-left text-gray-600">Incidentes</th>
+                            <td class="p-3">Nenhum incidente reportado</td>
+                        </tr>
+                        <tr class="border-b">
+                            <th class="p-3 text-left text-gray-600">Condição da Rota</th>
+                            <td class="p-3">Rotas acessíveis</td>
+                        </tr>
+                        <tr class="border-b">
+                            <th class="p-3 text-left text-gray-600">Status Distribuição</th>
+                            <td class="p-3">Não realizada (Ciclo de Março: 13 Mar - 19 Mar)</td>
+                        </tr>
+                    </table>
+                    <div class="grafico-placeholder mt-4">Mapa de Incidentes em Maputo Cidade</div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer class="bg-gray-800 text-white text-center p-4 mt-6">
+        <p>Relatório gerado por Edson Leonel Albino Salomão - Contacto: Edson.salomao@aglgroup.com</p>
+    </footer>
+    <script>
+        function toggleContent(id) {
+            const content = document.getElementById(id);
+            content.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
